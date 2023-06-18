@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230407 21:47:32.441" rpa="false" schemaversion="3">
+<suite id="s1" name="E2E - POM" source="C:\Users\SashkaJovanovic\RobotWorkSpace\E2E - POM">
+<suite id="s1-s1" name="TestSuits" source="C:\Users\SashkaJovanovic\RobotWorkSpace\E2E - POM\TestSuits">
+<suite id="s1-s1-s1" name="E2E" source="C:\Users\SashkaJovanovic\RobotWorkSpace\E2E - POM\TestSuits\E2E.robot">
+<test id="s1-s1-s1-t1" name="Verify appearance of Login page" line="14">
+<kw name="Open saucedemo website" library="LoginKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BaseURL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230407 21:47:32.803" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230407 21:47:32.802" endtime="20230407 21:47:35.122"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230407 21:47:35.122" endtime="20230407 21:47:35.254"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:32.799" endtime="20230407 21:47:35.254"/>
+</kw>
+<kw name="Verify appearance of Login Page" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txtUserName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.257" endtime="20230407 21:47:35.392"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.392" endtime="20230407 21:47:35.427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.427" endtime="20230407 21:47:35.454"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:35.256" endtime="20230407 21:47:35.454"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:32.797" endtime="20230407 21:47:35.455"/>
+</test>
+<test id="s1-s1-s1-t2" name="Verify successful login" line="18">
+<kw name="Enter valid credentials" library="LoginKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUserName}</arg>
+<arg>${Valid credentials}[0]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:35.462" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230407 21:47:35.462" endtime="20230407 21:47:35.620"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${Valid credentials}[1]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:35.622" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20230407 21:47:35.676" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230407 21:47:35.752" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230407 21:47:35.621" endtime="20230407 21:47:35.753"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:35.461" endtime="20230407 21:47:35.754"/>
+</kw>
+<kw name="Login to the application" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:35.756" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20230407 21:47:35.755" endtime="20230407 21:47:35.896"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:35.755" endtime="20230407 21:47:35.897"/>
+</kw>
+<kw name="Verify user is logged in" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.898" endtime="20230407 21:47:35.938"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddBackpack}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.939" endtime="20230407 21:47:35.969"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddLight}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:35.970" endtime="20230407 21:47:36.005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddShirt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:36.006" endtime="20230407 21:47:36.039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddJacket}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:36.039" endtime="20230407 21:47:36.070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddOnesie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:36.071" endtime="20230407 21:47:36.108"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddRedShirt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:36.108" endtime="20230407 21:47:36.134"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:35.897" endtime="20230407 21:47:36.135"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:35.459" endtime="20230407 21:47:36.136"/>
+</test>
+<test id="s1-s1-s1-t3" name="Verify elements are sorted by price descending" line="23">
+<kw name="Sort products by price" library="ProductsKeywords">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${ddwSorting}</arg>
+<arg>hilo</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230407 21:47:36.140" level="INFO">Selecting options from selection list 'class=product_sort_container' by value hilo.</msg>
+<status status="PASS" starttime="20230407 21:47:36.139" endtime="20230407 21:47:36.236"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.139" endtime="20230407 21:47:36.237"/>
+</kw>
+<kw name="Verify elements are sorted by price descending" library="ProductsKeywords">
+<kw name="Get price for all items" library="ProductsKeywords">
+<for flavor="IN">
+<var>${item}</var>
+<value>@{itemsList}</value>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.291" level="INFO">${priceText} = $49.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.246" endtime="20230407 21:47:36.292"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.294" level="INFO">@{priceText1} = [  | 49.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.292" endtime="20230407 21:47:36.295"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.296" level="INFO">${priceText2} = 49.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.295" endtime="20230407 21:47:36.297"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.298" level="INFO">${priceNumber} = 49.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.297" endtime="20230407 21:47:36.301"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.301" endtime="20230407 21:47:36.302"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.242" endtime="20230407 21:47:36.302"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[2]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.334" level="INFO">${priceText} = $29.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.305" endtime="20230407 21:47:36.335"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.337" level="INFO">@{priceText1} = [  | 29.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.336" endtime="20230407 21:47:36.338"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.339" level="INFO">${priceText2} = 29.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.338" endtime="20230407 21:47:36.340"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.341" level="INFO">${priceNumber} = 29.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.340" endtime="20230407 21:47:36.342"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.342" endtime="20230407 21:47:36.343"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.304" endtime="20230407 21:47:36.344"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[3]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.378" level="INFO">${priceText} = $15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.345" endtime="20230407 21:47:36.378"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.379" level="INFO">@{priceText1} = [  | 15.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.378" endtime="20230407 21:47:36.380"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.381" level="INFO">${priceText2} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.380" endtime="20230407 21:47:36.381"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.384" level="INFO">${priceNumber} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.382" endtime="20230407 21:47:36.385"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.385" endtime="20230407 21:47:36.386"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.344" endtime="20230407 21:47:36.387"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[4]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.418" level="INFO">${priceText} = $15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.388" endtime="20230407 21:47:36.419"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.420" level="INFO">@{priceText1} = [  | 15.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.419" endtime="20230407 21:47:36.420"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.421" level="INFO">${priceText2} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.421" endtime="20230407 21:47:36.422"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.423" level="INFO">${priceNumber} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.422" endtime="20230407 21:47:36.423"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.424" endtime="20230407 21:47:36.424"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.387" endtime="20230407 21:47:36.426"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[5]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.457" level="INFO">${priceText} = $9.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.426" endtime="20230407 21:47:36.458"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.460" level="INFO">@{priceText1} = [  | 9.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.459" endtime="20230407 21:47:36.461"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.463" level="INFO">${priceText2} = 9.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.461" endtime="20230407 21:47:36.464"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.470" level="INFO">${priceNumber} = 9.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.465" endtime="20230407 21:47:36.471"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.472" endtime="20230407 21:47:36.473"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.426" endtime="20230407 21:47:36.473"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[6]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.512" level="INFO">${priceText} = $7.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.475" endtime="20230407 21:47:36.514"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:36.516" level="INFO">@{priceText1} = [  | 7.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:36.514" endtime="20230407 21:47:36.519"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.521" level="INFO">${priceText2} = 7.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.520" endtime="20230407 21:47:36.522"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:36.524" level="INFO">${priceNumber} = 7.99</msg>
+<status status="PASS" starttime="20230407 21:47:36.523" endtime="20230407 21:47:36.526"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:36.526" endtime="20230407 21:47:36.527"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.474" endtime="20230407 21:47:36.528"/>
+</iter>
+<status status="PASS" starttime="20230407 21:47:36.240" endtime="20230407 21:47:36.528"/>
+</for>
+<status status="PASS" starttime="20230407 21:47:36.239" endtime="20230407 21:47:36.528"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${number}</var>
+<value>0</value>
+<value>5</value>
+<iter>
+<var name="${number}">0</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${adding}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.531" level="INFO">${adding} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.530" endtime="20230407 21:47:36.533"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${IndexOfNextElement}</var>
+<arg>${number}+${adding}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230407 21:47:36.537" level="INFO">${IndexOfNextElement} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.535" endtime="20230407 21:47:36.538"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${prices}[${number}]&gt;= ${prices}[${IndexOfNextElement}]</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:36.539" endtime="20230407 21:47:36.541"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.529" endtime="20230407 21:47:36.541"/>
+</iter>
+<iter>
+<var name="${number}">1</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${adding}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.543" level="INFO">${adding} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.543" endtime="20230407 21:47:36.544"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${IndexOfNextElement}</var>
+<arg>${number}+${adding}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230407 21:47:36.546" level="INFO">${IndexOfNextElement} = 2</msg>
+<status status="PASS" starttime="20230407 21:47:36.545" endtime="20230407 21:47:36.547"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${prices}[${number}]&gt;= ${prices}[${IndexOfNextElement}]</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:36.547" endtime="20230407 21:47:36.549"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.541" endtime="20230407 21:47:36.551"/>
+</iter>
+<iter>
+<var name="${number}">2</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${adding}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.553" level="INFO">${adding} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.552" endtime="20230407 21:47:36.554"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${IndexOfNextElement}</var>
+<arg>${number}+${adding}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230407 21:47:36.555" level="INFO">${IndexOfNextElement} = 3</msg>
+<status status="PASS" starttime="20230407 21:47:36.554" endtime="20230407 21:47:36.556"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${prices}[${number}]&gt;= ${prices}[${IndexOfNextElement}]</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:36.556" endtime="20230407 21:47:36.558"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.551" endtime="20230407 21:47:36.558"/>
+</iter>
+<iter>
+<var name="${number}">3</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${adding}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.559" level="INFO">${adding} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.558" endtime="20230407 21:47:36.559"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${IndexOfNextElement}</var>
+<arg>${number}+${adding}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230407 21:47:36.561" level="INFO">${IndexOfNextElement} = 4</msg>
+<status status="PASS" starttime="20230407 21:47:36.560" endtime="20230407 21:47:36.561"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${prices}[${number}]&gt;= ${prices}[${IndexOfNextElement}]</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:36.562" endtime="20230407 21:47:36.563"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.558" endtime="20230407 21:47:36.563"/>
+</iter>
+<iter>
+<var name="${number}">4</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${adding}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:36.565" level="INFO">${adding} = 1</msg>
+<status status="PASS" starttime="20230407 21:47:36.564" endtime="20230407 21:47:36.565"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${IndexOfNextElement}</var>
+<arg>${number}+${adding}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230407 21:47:36.569" level="INFO">${IndexOfNextElement} = 5</msg>
+<status status="PASS" starttime="20230407 21:47:36.567" endtime="20230407 21:47:36.570"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${prices}[${number}]&gt;= ${prices}[${IndexOfNextElement}]</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:36.570" endtime="20230407 21:47:36.571"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.563" endtime="20230407 21:47:36.572"/>
+</iter>
+<status status="PASS" starttime="20230407 21:47:36.528" endtime="20230407 21:47:36.572"/>
+</for>
+<status status="PASS" starttime="20230407 21:47:36.237" endtime="20230407 21:47:36.572"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.137" endtime="20230407 21:47:36.573"/>
+</test>
+<test id="s1-s1-s1-t4" name="Verify one product cannot be added to the cart twice" line="27">
+<kw name="Add a specific product to the cart" library="ProductsKeywords">
+<for flavor="IN">
+<var>${product}</var>
+<value>@{btnsAdd}</value>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-backpack</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.579" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.578" endtime="20230407 21:47:36.656"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.578" endtime="20230407 21:47:36.657"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-bike-light</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.658" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.657" endtime="20230407 21:47:36.753"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.657" endtime="20230407 21:47:36.754"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-bolt-t-shirt</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.757" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.755" endtime="20230407 21:47:36.809"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.754" endtime="20230407 21:47:36.810"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-fleece-jacket</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.811" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.810" endtime="20230407 21:47:36.865"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.810" endtime="20230407 21:47:36.865"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-onesie</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.871" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.868" endtime="20230407 21:47:36.972"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.866" endtime="20230407 21:47:36.973"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-test.allthethings()-t-shirt-(red)</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:36.976" level="INFO">Clicking button 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
+<status status="PASS" starttime="20230407 21:47:36.975" endtime="20230407 21:47:37.040"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.973" endtime="20230407 21:47:37.041"/>
+</iter>
+<status status="PASS" starttime="20230407 21:47:36.577" endtime="20230407 21:47:37.041"/>
+</for>
+<status status="PASS" starttime="20230407 21:47:36.577" endtime="20230407 21:47:37.041"/>
+</kw>
+<kw name="Verify that the added product cannot be added to the basket again" library="ProductsKeywords">
+<for flavor="IN">
+<var>${product}</var>
+<value>@{btnsAdd}</value>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-backpack</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.055" level="INFO">Element 'id=add-to-cart-sauce-labs-backpack' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.045" endtime="20230407 21:47:37.056"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.044" endtime="20230407 21:47:37.056"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-bike-light</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.067" level="INFO">Element 'id=add-to-cart-sauce-labs-bike-light' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.057" endtime="20230407 21:47:37.069"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.056" endtime="20230407 21:47:37.069"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-bolt-t-shirt</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.078" level="INFO">Element 'id=add-to-cart-sauce-labs-bolt-t-shirt' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.070" endtime="20230407 21:47:37.078"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.070" endtime="20230407 21:47:37.079"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-fleece-jacket</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.090" level="INFO">Element 'id=add-to-cart-sauce-labs-fleece-jacket' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.079" endtime="20230407 21:47:37.090"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.079" endtime="20230407 21:47:37.090"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-sauce-labs-onesie</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.103" level="INFO">Element 'id=add-to-cart-sauce-labs-onesie' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.091" endtime="20230407 21:47:37.104"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.090" endtime="20230407 21:47:37.105"/>
+</iter>
+<iter>
+<var name="${product}">id=add-to-cart-test.allthethings()-t-shirt-(red)</var>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.114" level="INFO">Element 'id=add-to-cart-test.allthethings()-t-shirt-(red)' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.105" endtime="20230407 21:47:37.115"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.105" endtime="20230407 21:47:37.115"/>
+</iter>
+<status status="PASS" starttime="20230407 21:47:37.044" endtime="20230407 21:47:37.115"/>
+</for>
+<status status="PASS" starttime="20230407 21:47:37.043" endtime="20230407 21:47:37.116"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:36.575" endtime="20230407 21:47:37.118"/>
+</test>
+<test id="s1-s1-s1-t5" name="Verify that the added product can be removed" line="31">
+<kw name="Remove added product" library="ProductsKeywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${IsElementVisible}</var>
+<arg>Element Should be Visible</arg>
+<arg>${RemoveJacket}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${RemoveJacket}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.154" level="INFO">Element 'id=remove-sauce-labs-fleece-jacket' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.123" endtime="20230407 21:47:37.154"/>
+</kw>
+<msg timestamp="20230407 21:47:37.155" level="INFO">${IsElementVisible} = True</msg>
+<status status="PASS" starttime="20230407 21:47:37.123" endtime="20230407 21:47:37.155"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${IsElementVisible}</arg>
+<arg>Remove product</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Remove product" library="ProductsKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RemoveJacket}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.158" level="INFO">Clicking element 'id=remove-sauce-labs-fleece-jacket'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.157" endtime="20230407 21:47:37.209"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.157" endtime="20230407 21:47:37.210"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.156" endtime="20230407 21:47:37.210"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.122" endtime="20230407 21:47:37.210"/>
+</kw>
+<kw name="Verify that the product is removed" library="ProductsKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btnAddJacket}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.235" level="INFO">Element 'id=add-to-cart-sauce-labs-fleece-jacket' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.213" endtime="20230407 21:47:37.236"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.211" endtime="20230407 21:47:37.236"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.120" endtime="20230407 21:47:37.237"/>
+</test>
+<test id="s1-s1-s1-t6" name="Verify Apperance of the Cart page" line="35">
+<kw name="Open the Cart page" library="CartKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${linCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.241" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.240" endtime="20230407 21:47:37.287"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.239" endtime="20230407 21:47:37.287"/>
+</kw>
+<kw name="Verify the Cart title is shown" library="CartKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblCart}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.310" level="INFO">Element 'xPath=//*[@class='title'][contains(text(), 'Cart')]' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.289" endtime="20230407 21:47:37.311"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.288" endtime="20230407 21:47:37.311"/>
+</kw>
+<kw name="Verify the Quantity label is shown" library="CartKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblQuantity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.337" level="INFO">Element 'class=cart_quantity_label' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.313" endtime="20230407 21:47:37.338"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.312" endtime="20230407 21:47:37.338"/>
+</kw>
+<kw name="Verify the Description label is shown" library="CartKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblDescription}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.358" level="INFO">Element 'class=cart_quantity_label' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.340" endtime="20230407 21:47:37.358"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.339" endtime="20230407 21:47:37.358"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.238" endtime="20230407 21:47:37.359"/>
+</test>
+<test id="s1-s1-s1-t7" name="Verify that product can be removed from the cart" line="41">
+<kw name="Check that product is in the Cart and remove it" library="CartKeywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${IsElementVisible}</var>
+<arg>Element Should be Visible</arg>
+<arg>${lblBackpack}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblBackpack}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.386" level="INFO">Element 'xPath=//*[@class='inventory_item_name'][contains(text(), 'Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.363" endtime="20230407 21:47:37.386"/>
+</kw>
+<msg timestamp="20230407 21:47:37.386" level="INFO">${IsElementVisible} = True</msg>
+<status status="PASS" starttime="20230407 21:47:37.362" endtime="20230407 21:47:37.386"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${IsElementVisible}</arg>
+<arg>Remove product action</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Remove product action" library="CartKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnRemoveBackpack}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.390" level="INFO">Clicking button 'id=remove-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.388" endtime="20230407 21:47:37.443"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.388" endtime="20230407 21:47:37.443"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.387" endtime="20230407 21:47:37.443"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.361" endtime="20230407 21:47:37.443"/>
+</kw>
+<kw name="Verify that the product is removed from the Cart" library="CartKeywords">
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${lblBackpack}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230407 21:47:37.457" level="INFO">Element 'xPath=//*[@class='inventory_item_name'][contains(text(), 'Backpack')]' did not exist.</msg>
+<status status="PASS" starttime="20230407 21:47:37.446" endtime="20230407 21:47:37.458"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.444" endtime="20230407 21:47:37.459"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.360" endtime="20230407 21:47:37.460"/>
+</test>
+<test id="s1-s1-s1-t8" name="Verify Appearance of Checkout page" line="45">
+<kw name="Open the Checkout Page" library="CartKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnCheckout}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.465" level="INFO">Clicking button 'id=checkout'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.464" endtime="20230407 21:47:37.543"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.463" endtime="20230407 21:47:37.544"/>
+</kw>
+<kw name="Verify that the Checkout title is shown" library="CheckoutKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblCheckout}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.578" level="INFO">Element 'xPath=//*[@class='title'][contains(text(), 'Information')]' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.547" endtime="20230407 21:47:37.579"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.546" endtime="20230407 21:47:37.579"/>
+</kw>
+<kw name="Verify that the First name input field is shown" library="CheckoutKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${txtFirstName}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.611" level="INFO">Element 'id=first-name' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.581" endtime="20230407 21:47:37.611"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.580" endtime="20230407 21:47:37.612"/>
+</kw>
+<kw name="Verify that the Last Name input field is shown" library="CheckoutKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${txtLastName}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.643" level="INFO">Element 'id=last-name' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.613" endtime="20230407 21:47:37.644"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.613" endtime="20230407 21:47:37.645"/>
+</kw>
+<kw name="Verify that the Zip input field is shown" library="CheckoutKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${txtZip}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.678" level="INFO">Element 'id=postal-code' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.646" endtime="20230407 21:47:37.679"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.646" endtime="20230407 21:47:37.679"/>
+</kw>
+<kw name="Verify that the Continue button is shown" library="CheckoutKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btnContinue}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:37.713" level="INFO">Element 'id=continue' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:37.681" endtime="20230407 21:47:37.714"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.680" endtime="20230407 21:47:37.714"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.462" endtime="20230407 21:47:37.715"/>
+</test>
+<test id="s1-s1-s1-t9" name="Verify success of Checkout functionality" line="53">
+<kw name="Enter First name" library="CheckoutKeywords">
+<arg>${FirstName}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtFirstName}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.723" level="INFO">Typing text 'Test' into text field 'id=first-name'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.722" endtime="20230407 21:47:37.843"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.720" endtime="20230407 21:47:37.843"/>
+</kw>
+<kw name="Enter Last name" library="CheckoutKeywords">
+<arg>${LastName}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtLastName}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.846" level="INFO">Typing text 'Testic' into text field 'id=last-name'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.845" endtime="20230407 21:47:37.966"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.844" endtime="20230407 21:47:37.968"/>
+</kw>
+<kw name="Enter Zip" library="CheckoutKeywords">
+<arg>${Zip}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtZip}</arg>
+<arg>${Zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:37.971" level="INFO">Typing text '19000' into text field 'id=postal-code'.</msg>
+<status status="PASS" starttime="20230407 21:47:37.970" endtime="20230407 21:47:38.047"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.969" endtime="20230407 21:47:38.047"/>
+</kw>
+<kw name="Submit information" library="CheckoutKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnContinue}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:38.052" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" starttime="20230407 21:47:38.051" endtime="20230407 21:47:38.129"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.049" endtime="20230407 21:47:38.130"/>
+</kw>
+<kw name="Verify that the Overview Page is opened" library="OverviewKeywords">
+<kw name="Verify that the Overview title is shown" library="OverviewKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblOverview}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:38.163" level="INFO">Element 'xPath=//*[@class='title'][contains(text(), 'Overview')]' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:38.138" endtime="20230407 21:47:38.163"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.134" endtime="20230407 21:47:38.163"/>
+</kw>
+<kw name="Verify that the Finish button is shown" library="OverviewKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btnFinish}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:38.190" level="INFO">Element 'id=finish' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:38.164" endtime="20230407 21:47:38.190"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.164" endtime="20230407 21:47:38.190"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.131" endtime="20230407 21:47:38.191"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:37.719" endtime="20230407 21:47:38.191"/>
+</test>
+<test id="s1-s1-s1-t10" name="Verify that Checkout is successfully completed" line="60">
+<kw name="Click the Finish button" library="OverviewKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnFinish}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:38.195" level="INFO">Clicking button 'id=finish'.</msg>
+<status status="PASS" starttime="20230407 21:47:38.194" endtime="20230407 21:47:38.254"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.194" endtime="20230407 21:47:38.254"/>
+</kw>
+<kw name="Verify appearance of the Checkout: Complete! label" library="EndingKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${lblComplete}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:38.282" level="INFO">Element 'xPath=//*[@class='title'][contains(text(), 'Complete')]' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:38.256" endtime="20230407 21:47:38.284"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.255" endtime="20230407 21:47:38.284"/>
+</kw>
+<kw name="Verify appearance of the Back home button" library="EndingKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btnBackHome}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230407 21:47:38.310" level="INFO">Element 'id=back-to-products' is displayed.</msg>
+<status status="PASS" starttime="20230407 21:47:38.286" endtime="20230407 21:47:38.310"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.286" endtime="20230407 21:47:38.310"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:38.193" endtime="20230407 21:47:38.311"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230407 21:47:38.313" endtime="20230407 21:47:40.513"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:32.483" endtime="20230407 21:47:40.514"/>
+</suite>
+<suite id="s1-s1-s2" name="SortingTemplate" source="C:\Users\SashkaJovanovic\RobotWorkSpace\E2E - POM\TestSuits\SortingTemplate.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open saucedemo website</arg>
+<arg>AND</arg>
+<arg>Verify appearance of Login Page</arg>
+<arg>AND</arg>
+<arg>Enter valid credentials</arg>
+<arg>AND</arg>
+<arg>Login to the application</arg>
+<arg>AND</arg>
+<arg>Verify user is logged in</arg>
+<arg>AND</arg>
+<arg>Sort products by price</arg>
+<arg>AND</arg>
+<arg>Get price for all items</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open saucedemo website" library="LoginKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BaseURL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230407 21:47:40.555" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230407 21:47:40.554" endtime="20230407 21:47:42.667"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230407 21:47:42.668" endtime="20230407 21:47:42.806"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:40.553" endtime="20230407 21:47:42.806"/>
+</kw>
+<kw name="Verify appearance of Login Page" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txtUserName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:42.807" endtime="20230407 21:47:42.836"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:42.838" endtime="20230407 21:47:42.864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:42.866" endtime="20230407 21:47:42.898"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:42.807" endtime="20230407 21:47:42.899"/>
+</kw>
+<kw name="Enter valid credentials" library="LoginKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUserName}</arg>
+<arg>${Valid credentials}[0]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:42.903" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230407 21:47:42.901" endtime="20230407 21:47:43.016"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${Valid credentials}[1]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.019" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20230407 21:47:43.074" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230407 21:47:43.156" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230407 21:47:43.017" endtime="20230407 21:47:43.157"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:42.900" endtime="20230407 21:47:43.157"/>
+</kw>
+<kw name="Login to the application" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.159" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20230407 21:47:43.158" endtime="20230407 21:47:43.264"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.157" endtime="20230407 21:47:43.264"/>
+</kw>
+<kw name="Verify user is logged in" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.266" endtime="20230407 21:47:43.306"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddBackpack}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.307" endtime="20230407 21:47:43.337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddLight}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.337" endtime="20230407 21:47:43.371"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddShirt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.371" endtime="20230407 21:47:43.398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddJacket}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.399" endtime="20230407 21:47:43.423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddOnesie}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.423" endtime="20230407 21:47:43.460"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnAddRedShirt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230407 21:47:43.460" endtime="20230407 21:47:43.481"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.264" endtime="20230407 21:47:43.481"/>
+</kw>
+<kw name="Sort products by price" library="ProductsKeywords">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${ddwSorting}</arg>
+<arg>hilo</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230407 21:47:43.484" level="INFO">Selecting options from selection list 'class=product_sort_container' by value hilo.</msg>
+<status status="PASS" starttime="20230407 21:47:43.482" endtime="20230407 21:47:43.560"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.481" endtime="20230407 21:47:43.560"/>
+</kw>
+<kw name="Get price for all items" library="ProductsKeywords">
+<for flavor="IN">
+<var>${item}</var>
+<value>@{itemsList}</value>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.593" level="INFO">${priceText} = $49.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.561" endtime="20230407 21:47:43.593"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.594" level="INFO">@{priceText1} = [  | 49.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.593" endtime="20230407 21:47:43.594"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.596" level="INFO">${priceText2} = 49.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.595" endtime="20230407 21:47:43.597"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.598" level="INFO">${priceNumber} = 49.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.597" endtime="20230407 21:47:43.598"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.600" endtime="20230407 21:47:43.602"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.561" endtime="20230407 21:47:43.602"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[2]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.625" level="INFO">${priceText} = $29.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.603" endtime="20230407 21:47:43.626"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.627" level="INFO">@{priceText1} = [  | 29.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.626" endtime="20230407 21:47:43.627"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.628" level="INFO">${priceText2} = 29.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.627" endtime="20230407 21:47:43.629"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.629" level="INFO">${priceNumber} = 29.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.629" endtime="20230407 21:47:43.630"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.630" endtime="20230407 21:47:43.631"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.602" endtime="20230407 21:47:43.631"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[3]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.659" level="INFO">${priceText} = $15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.634" endtime="20230407 21:47:43.659"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.660" level="INFO">@{priceText1} = [  | 15.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.659" endtime="20230407 21:47:43.660"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.662" level="INFO">${priceText2} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.661" endtime="20230407 21:47:43.663"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.664" level="INFO">${priceNumber} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.663" endtime="20230407 21:47:43.664"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.665" endtime="20230407 21:47:43.667"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.632" endtime="20230407 21:47:43.668"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[4]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.702" level="INFO">${priceText} = $15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.669" endtime="20230407 21:47:43.703"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.704" level="INFO">@{priceText1} = [  | 15.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.703" endtime="20230407 21:47:43.704"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.705" level="INFO">${priceText2} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.705" endtime="20230407 21:47:43.706"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.707" level="INFO">${priceNumber} = 15.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.706" endtime="20230407 21:47:43.708"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.708" endtime="20230407 21:47:43.709"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.668" endtime="20230407 21:47:43.710"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[5]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.739" level="INFO">${priceText} = $9.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.710" endtime="20230407 21:47:43.739"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.741" level="INFO">@{priceText1} = [  | 9.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.740" endtime="20230407 21:47:43.742"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.743" level="INFO">${priceText2} = 9.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.742" endtime="20230407 21:47:43.743"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.745" level="INFO">${priceNumber} = 9.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.744" endtime="20230407 21:47:43.747"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.747" endtime="20230407 21:47:43.748"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.710" endtime="20230407 21:47:43.749"/>
+</iter>
+<iter>
+<var name="${item}">//*[@id="inventory_container"]/div/div[6]/div[2]/div[2]/div</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceText}</var>
+<arg>${item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230407 21:47:43.775" level="INFO">${priceText} = $7.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.751" endtime="20230407 21:47:43.775"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{priceText1}</var>
+<arg>${priceText}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230407 21:47:43.777" level="INFO">@{priceText1} = [  | 7.99 ]</msg>
+<status status="PASS" starttime="20230407 21:47:43.776" endtime="20230407 21:47:43.777"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${priceText2}</var>
+<arg>${priceText1}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230407 21:47:43.778" level="INFO">${priceText2} = 7.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.777" endtime="20230407 21:47:43.778"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${priceNumber}</var>
+<arg>${priceText2}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230407 21:47:43.780" level="INFO">${priceNumber} = 7.99</msg>
+<status status="PASS" starttime="20230407 21:47:43.779" endtime="20230407 21:47:43.781"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${prices}</arg>
+<arg>${priceNumber}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230407 21:47:43.781" endtime="20230407 21:47:43.782"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.749" endtime="20230407 21:47:43.783"/>
+</iter>
+<status status="PASS" starttime="20230407 21:47:43.560" endtime="20230407 21:47:43.783"/>
+</for>
+<status status="PASS" starttime="20230407 21:47:43.560" endtime="20230407 21:47:43.784"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:40.552" endtime="20230407 21:47:43.784"/>
+</kw>
+<test id="s1-s1-s2-t1" name="Verify that the first product is more expensive than the second" line="35">
+<kw name="Verify elements are sorted by price descending">
+<arg>${prices}[0]</arg>
+<arg>${prices}[1]</arg>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${priceOfItem1}&gt;= ${priceOfItem1}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:43.787" endtime="20230407 21:47:43.788"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.786" endtime="20230407 21:47:43.789"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.785" endtime="20230407 21:47:43.789"/>
+</test>
+<test id="s1-s1-s2-t2" name="Verify that the second product is more expensive than the third" line="36">
+<kw name="Verify elements are sorted by price descending">
+<arg>${prices}[1]</arg>
+<arg>${prices}[2]</arg>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${priceOfItem1}&gt;= ${priceOfItem1}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:43.813" endtime="20230407 21:47:43.813"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.812" endtime="20230407 21:47:43.814"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.811" endtime="20230407 21:47:43.814"/>
+</test>
+<test id="s1-s1-s2-t3" name="Verify that the third product is more expensive than the fourth" line="37">
+<kw name="Verify elements are sorted by price descending">
+<arg>${prices}[2]</arg>
+<arg>${prices}[3]</arg>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${priceOfItem1}&gt;= ${priceOfItem1}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:43.821" endtime="20230407 21:47:43.822"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.820" endtime="20230407 21:47:43.822"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.819" endtime="20230407 21:47:43.823"/>
+</test>
+<test id="s1-s1-s2-t4" name="Verify that the fourth product is more expensive than the fifth" line="38">
+<kw name="Verify elements are sorted by price descending">
+<arg>${prices}[3]</arg>
+<arg>${prices}[4]</arg>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${priceOfItem1}&gt;= ${priceOfItem1}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:43.827" endtime="20230407 21:47:43.828"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.826" endtime="20230407 21:47:43.829"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.825" endtime="20230407 21:47:43.829"/>
+</test>
+<test id="s1-s1-s2-t5" name="Verify that the fifth product is more expensive than the sixth" line="39">
+<kw name="Verify elements are sorted by price descending">
+<arg>${prices}[4]</arg>
+<arg>${prices}[5]</arg>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${priceOfItem1}&gt;= ${priceOfItem1}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230407 21:47:43.836" endtime="20230407 21:47:43.837"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.835" endtime="20230407 21:47:43.837"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:43.831" endtime="20230407 21:47:43.838"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230407 21:47:43.840" endtime="20230407 21:47:46.014"/>
+</kw>
+<status status="PASS" starttime="20230407 21:47:40.522" endtime="20230407 21:47:46.014"/>
+</suite>
+<status status="PASS" starttime="20230407 21:47:32.479" endtime="20230407 21:47:46.023"/>
+</suite>
+<status status="PASS" starttime="20230407 21:47:32.446" endtime="20230407 21:47:46.032"/>
+</suite>
+<statistics>
+<total>
+<stat pass="15" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="15" fail="0" skip="0" id="s1" name="E2E - POM">E2E - POM</stat>
+<stat pass="15" fail="0" skip="0" id="s1-s1" name="TestSuits">E2E - POM.TestSuits</stat>
+<stat pass="10" fail="0" skip="0" id="s1-s1-s1" name="E2E">E2E - POM.TestSuits.E2E</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1-s2" name="SortingTemplate">E2E - POM.TestSuits.SortingTemplate</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
